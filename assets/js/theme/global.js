@@ -27,3 +27,11 @@ export default class Global extends PageManager {
         svgInjector();
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('react-component-container');
+    if (container) {
+        ReactDOM.render(React.createElement(MyComponent), container);
+    }
+});

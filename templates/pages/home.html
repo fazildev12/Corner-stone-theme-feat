@@ -31,6 +31,8 @@ blog:
     {{/if}}
     {{{region name="home_below_featured_products"}}}
 
+    <div id="react-component-container"></div>
+
     {{#if products.top_sellers}}
         {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
     {{/if}}
