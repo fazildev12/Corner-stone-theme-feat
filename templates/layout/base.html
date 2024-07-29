@@ -10,12 +10,12 @@
         <link href="{{ head.favicon }}" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script  src="https://cdn.jsdelivr.net/gh/fazildev12/Feature-Main-App@main/dist/sample.bundle.867c10bbe0da82df726a.js"></script>
+
         <script>
             {{!-- Change document class from no-js to js so we can detect this in css --}}
             document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
         </script>
-
-        <script src="https://cdn.jsdelivr.net/gh/fazildev12/Feature-Main-App@main/dist/my-component.bundle.js"></script>
 
         {{> components/common/polyfill-script }}
         <script>window.consentManagerTranslations = `{{{langJson 'consent_manager'}}}`;</script>

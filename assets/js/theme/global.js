@@ -1,5 +1,4 @@
 import 'focus-within-polyfill';
-
 import './global/jquery-migrate';
 import './common/select-option-plugin';
 import PageManager from './page-manager';
@@ -12,6 +11,12 @@ import quickView from './global/quick-view';
 import cartPreview from './global/cart-preview';
 import carousel from './common/carousel';
 import svgInjector from './global/svg-injector';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { createRoot } from 'react-dom/client';
+
 
 export default class Global extends PageManager {
     onReady() {
@@ -29,9 +34,10 @@ export default class Global extends PageManager {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('react-component-container');
-    if (container) {
-        ReactDOM.render(React.createElement(MyComponent), container);
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof window.Sample === 'function') {
+        ReactDOM.render(<window.Sample />, document.querySelector('#react-component-container'));
+    } else {
+        console.error('Sample is not defined or is not a valid React component');
     }
 });

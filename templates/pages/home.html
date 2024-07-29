@@ -26,12 +26,18 @@ blog:
     {{/each}}
 
 <div class="main full">
+
+
+    <div id="react-component-container"> React component will show 3333</div>
+
+    
+
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
     {{/if}}
     {{{region name="home_below_featured_products"}}}
 
-    <div id="react-component-container"></div>
+
 
     {{#if products.top_sellers}}
         {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
@@ -42,6 +48,7 @@ blog:
         {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
     {{/if}}
     {{{region name="home_below_new_products"}}}
+
 </div>
 {{/partial}}
 {{> layout/base}}
